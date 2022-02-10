@@ -48,7 +48,7 @@
 1. Clone the repo
 
 ```sh
-git clone git@github.com:nyu-dss/viewpoint.git && cd viewpoint
+git clone git@github.com:nyu-dss/viewpoint-template.git && cd viewpoint-template
 ```
 
 2. Install project node version (specified in `.nvmrc`)
@@ -69,7 +69,7 @@ npm install
 npm run dev
 ```
 
-5. Open in browser at [http://localhost:3000/viewpoint/](http://localhost:3000/viewpoint/)
+5. Open in browser at [http://localhost:3000/viewpoint-template/](http://localhost:3000/viewpoint-template/)
 
 6. Quit the server with `Ctrl-c`.
 
