@@ -1,4 +1,4 @@
-name: ftp deploy
+name: github pages deploy
 
 on:
   push:
@@ -22,11 +22,7 @@ jobs:
       - name: build
         run: npm run build
       - name: deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          server: dss.hosting.nyu.edu
-          username: ${{secrets.FTP_USERNAME}}@$dss.hosting.nyu.edu
-          password: ${{secrets.FTP_PASSWORD}}
-          local-dir: ./build/
-          state-name: ./.ftp-deploy-sync-state.json
-          server-dir: 'viewpoint/' # optional subdir, must end in /
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
