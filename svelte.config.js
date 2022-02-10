@@ -7,7 +7,7 @@ const config = {
 	kit: {
 		adapter: staticAdapter(),
 		paths: {
-			base: '/viewpoint'
+			base: '/viewpoint-template'
 		},
 		target: '#svelte'
 	}
