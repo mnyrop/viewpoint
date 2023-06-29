@@ -1,5 +1,5 @@
-export const siteTitle 	= 'nyu-dss/viewpoint';
-export const baseUrl		= '/viewpoint-template';
+export const siteTitle 	= 'viewpoint';
+export const baseUrl		= '/viewpoint';
 export const siteDescription = 'embeddable iiif viewers with svelte-kit';
 export const sampleManifests = [
 	'https://purl.stanford.edu/wr796rv9498/iiif/manifest',
