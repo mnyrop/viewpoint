@@ -1,11 +1,11 @@
-# nyu-dss/viewpoint-template
+# viewpoint
 
 ## Using the template
 
 1. Click the `Use this template` button and select where you would like to copy this repo to.
 2. Next, open the `svelte.config.js` file in your new repo using GitHub editor and change the following line
     ``` js
-    base: '/viewpoint-template'
+    base: '/viewpoint'
     ```
     to the **name** of your repository, e.g., `my-repo`
     ``` js
@@ -13,8 +13,8 @@
     ```
 3. Open the `src/lib/vars/constants.js` file in your new repo using GitHub editor and change the following lines:
     ``` js
-    export const siteTitle = 'nyu-dss/viewpoint';
-    export const baseUrl = '/viewpoint-template'; // this should be the same as your repo too, e.g., '/my-repo'
+    export const siteTitle = 'viewpoint';
+    export const baseUrl = '/viewpoint'; // this should be the same as your repo too, e.g., '/my-repo'
     export const siteDescription = 'embeddable iiif viewers with svelte-kit';
     export const sampleManifests = [
       'https://purl.stanford.edu/wr796rv9498/iiif/manifest',
@@ -61,7 +61,7 @@
     ```sh
     npm run dev
     ```
-5. Open in browser at [http://localhost:3000/viewpoint-template/](http://localhost:3000/viewpoint-template/)
+5. Open in browser at [http://localhost:3000/viewpoint-template/](http://localhost:3000/viewpoint/)
 6. Quit the server with `Ctrl-c`.
 7. Auto-format code
     ```sh
