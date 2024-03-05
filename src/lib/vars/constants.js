@@ -1,5 +1,4 @@
 export const siteTitle 	= 'viewpoint';
-export const baseUrl		= '/viewpoint';
 export const siteDescription = 'embeddable iiif viewers with svelte-kit';
 export const sampleManifests = [
 	'https://purl.stanford.edu/wr796rv9498/iiif/manifest',
@@ -16,7 +15,6 @@ export const sampleManifests = [
 	'https://gallica.bnf.fr/iiif/ark:/12148/btv1b8490923n/manifest.json',
 	'https://jsonstorage.net/api/items/ce49ca3a-3031-4914-bb60-069a65642f9f'
 ];
-export const staticPath = import.meta.env.DEV ?  '' : baseUrl;
 export const placeholderText = 'URI input';
 export const viewers = [
 	{
