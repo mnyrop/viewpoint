@@ -14,9 +14,9 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '16.10.0'
+          node-version-file: '.nvmrc'
       - name: install
         run: npm install
       - name: build

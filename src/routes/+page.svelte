@@ -1,6 +1,4 @@
 <script>
-	export const prerender = true;
-
 	import { siteTitle, siteDescription } from '$lib/vars/constants.js';
 	import { timestamp } from '$lib/BuildTimeStamp.svelte';
 	import { base } from '$app/paths';
