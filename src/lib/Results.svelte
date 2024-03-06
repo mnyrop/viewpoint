@@ -8,32 +8,25 @@
 	import Icon from 'svelte-awesome';
 	import { copy, externalLink } from 'svelte-awesome/icons';
 
-
 	let embedCode, absoluteQuery;
 	let appURL = '';
 	let embedCopiedMessage = false;
 
 	$: absoluteQuery = appURL + $query;
 	$: embedCode = `<iframe src="${absoluteQuery}" height="400"/>`;
-
 	$: $query, generateIframe();
 
-	// $: $query, pushState();
-	//
-	// function pushState() {
-	// 	if (typeof window !== 'undefined') {
-	// 		history.pushState(null, null, `#${$query})}`);
-	// 	}
-	// }
-
 	function copyToClipboard(id) {
+		console.log(id);
 		let text = document.getElementById(id).textContent;
 		navigator.clipboard.writeText(text);
 	}
 
 	function triggerEmbedCopiedMessage() {
 		embedCopiedMessage = true;
-		setTimeout(() => { embedCopiedMessage = false;  }, 1000)
+		setTimeout(() => {
+			embedCopiedMessage = false;
+		}, 1000);
 	}
 
 	function generateIframe() {
@@ -61,36 +54,40 @@
 </script>
 
 <div class="columns is-gapless is-multiline fullwidth">
-	<div id="iframe-container" class="column is-12" style="height:75vh;background:#292929"></div>
-	<div class="column is-half" style="display: flex;">
-		<article class="message is-primary">
-		  <div class="message-header">
-		    <p>
-					Link to Full Screen Viewer&nbsp;&nbsp;
-					<a title="Open in new window" href={absoluteQuery} target="_none"><Icon data={externalLink} /></a>
-				</p>
-		  </div>
-		  <div class="message-body">
-				<p style="font-size:.8rem;word-wrap:break-word;max-width:100%">
-					<a href={absoluteQuery} target="_none">{absoluteQuery}</a>
-				</p>
-		  </div>
+	<div id="iframe-container" class="column is-12"></div>
+	<div class="column is-half is-flex">
+		<article class="message is-primary fullwidth">
+			<div class="message-header is-justify-content-left">
+				Link to Full Screen Viewerfullwidth
+				<a
+					title="Open in new window"
+					href={absoluteQuery}
+					target="_none"
+					class="button is-ghost has-text-white"><Icon data={externalLink} /></a
+				>
+			</div>
+			<div class="message-body fullwidth">
+				<a href={absoluteQuery} target="_none">{absoluteQuery}</a>
+			</div>
 		</article>
 	</div>
 
-	<div class="column is-half" style="display: flex;">
-		<article class="message is-link mr-5">
-		  <div id="embed-header" class="message-header">
-		    <p>
-					Embed Code&nbsp;&nbsp;
-					<a title="Copy to clipboard" on:click={() => copyToClipboard('embed-code')} on:click={triggerEmbedCopiedMessage}><Icon data={copy} /></a>
-					{#if embedCopiedMessage}
-					<span transition:fade class="ephemeral-message">&nbsp;Copied to clipboard!</span>
-					{/if}
-				</p>
-		  </div>
-		  <div class="message-body">
-		    <p id="embed-code" style="font-size:.8rem;word-wrap:break-word;font-family:monospace;max-width:100%" on:click={() => copyToClipboard('embed-code')} on:click={triggerEmbedCopiedMessage}>{embedCode}</p>
+	<div class="column is-half is-flex">
+		<article class="message is-link mr-5 fullwidth">
+			<div id="embed-header" class="message-header fullwidth is-justify-content-left">
+				Embed Code
+				<button
+					title="Copy to clipboard"
+					on:click={() => copyToClipboard('embed-code')}
+					on:click={triggerEmbedCopiedMessage}
+					class="button is-ghost has-text-white"><Icon data={copy} /></button
+				>
+				{#if embedCopiedMessage}
+					<span transition:fade class="ephemeral-message">Copied to clipboard!</span>
+				{/if}
+			</div>
+			<div id="embed-code" class="message-body fullwidth">
+				{embedCode}
 			</div>
 		</article>
 	</div>

@@ -1,52 +1,75 @@
 @charset "utf-8";
 
-/* $container-max-width: 900px; */
-$primary: #8957E5;
-$link: #5600E8;
+$primary: #8957e5;
+$link: #5600e8;
 $message-header-radius: 0px;
 $message-radius: 0px;
 
 /* EA80FC, BB86FC, 5600E8 */
 
 @import 'bulma/bulma.sass';
-html, body {
-  background: #292929;
+html,
+body {
+	background: #292929;
 }
 .form-sidebar {
-  background: black;
-  p, p.subtitle, .label {
-    color: #979797;
-  }
-  .label {
-    font-weight: normal;
-  }
-  a {
-    color: white !important;
-    &:hover {
-      color: $primary !important;
-    }
-  }
-  h1, h2 {
-    color: white !important;
-  }
-  button.is-primary {
-    padding: .5rem 1rem;
-    text-transform: uppercase;
-    font-size: .8rem;
-  }
-  .is-primary.no-hover:hover {
-    background-color: $primary;
-    cursor:default;
-  }
+	background: black;
+	p,
+	p.subtitle,
+	.label {
+		color: #979797;
+	}
+	.label {
+		font-weight: normal;
+	}
+	a {
+		color: white !important;
+		&:hover {
+			color: $primary !important;
+		}
+	}
+	h1,
+	h2 {
+		color: white !important;
+	}
+	button.is-primary {
+		padding: 0.5rem 1rem;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+	}
+	.is-primary.no-hover:hover {
+		background-color: $primary;
+		cursor: default;
+	}
 }
 
 .fullwidth {
-  width: 100%;
+	width: 100%;
 }
 
+.fullheight {
+	height: 100%;
+}
 
 .ephemeral-message {
-  font-family: monospace;
-  font-size: .8rem;
-  font-weight: normal;
+	font-family: monospace;
+	font-size: 0.8rem;
+	font-weight: normal;
+}
+
+.message-body {
+	font-size: 0.8rem;
+	word-wrap: break-word;
+	max-width: 100%;
+	font-family: monospace;
+}
+
+#iframe-container {
+	height: 75vh;
+	background: #292929;
+}
+
+.eye-spaced {
+	margin-left: -20px;
+	width: 80px;
 }

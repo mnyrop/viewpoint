@@ -6,7 +6,7 @@
 	onMount(async () => {
 		const Mirador = await import('mirador/dist/mirador.min.js');
 
-		function fetch(object, key, def='') {
+		function fetch(object, key, def = '') {
 			return key in object ? object[key] : def;
 		}
 
@@ -23,22 +23,24 @@
 
 		function windowObjectArray(manifests) {
 			let result = [];
-			manifests.forEach(m => result.push({ manifestId: m }));
+			manifests.forEach((m) => result.push({ manifestId: m }));
 			return result;
 		}
 
-
 		if (typeof window !== 'undefined') {
-			const response 					= queryString.parse(window.location.hash, {parseBooleans: true, arrayFormat: 'bracket'});
-			const manifests 				= fetch(response, 'manifests');
-			const theme 		 				= fetch(response, 'theme', 'light');
-			const view 							= fetch(response, 'view', 'single');
-			const thumbs 						= thumbnailCustomParse(response, 'thumbs');
-			const sidebarOpen 			= fetch(response, 'sidebar', false);
+			const response = queryString.parse(window.location.hash, {
+				parseBooleans: true,
+				arrayFormat: 'bracket'
+			});
+			const manifests = fetch(response, 'manifests');
+			const theme = fetch(response, 'theme', 'light');
+			const view = fetch(response, 'view', 'single');
+			const thumbs = thumbnailCustomParse(response, 'thumbs');
+			const sidebarOpen = fetch(response, 'sidebar', false);
 			const workspaceControls = fetch(response, 'workspacecontrols', false);
-			const windows						= windowObjectArray(manifests);
+			const windows = windowObjectArray(manifests);
 
-			console.log(manifests)
+			console.log(manifests);
 
 			const miradorInstance = Mirador.viewer({
 				id: 'mirador',
@@ -65,4 +67,4 @@
 	});
 </script>
 
-<div id="mirador" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0" />
+<div id="mirador" />
