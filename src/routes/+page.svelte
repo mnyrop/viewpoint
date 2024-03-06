@@ -27,9 +27,7 @@
 				<p class="subtitle is-size-6">{siteDescription}</p>
 				<p class="is-size-7 has-text-success">!! for experimental use only !!</p>
 				<p class="subtitle is-size-7">last built on {timestamp.toLowerCase()}</p>
-				<p>
-					<img src="{base}/eye.gif" style="margin-left:-20px;width:80px"/><img src="{base}/eye.gif" style="margin-left:-20px;width:80px"/>
-				</p>
+				<img src="{base}/eye.gif" class="eye-spaced"/><img src="{base}/eye.gif" class="eye-spaced"/>
 				<Form />
 			</div>
 			<div class="results-pane column is-two-thirds fullwidth">

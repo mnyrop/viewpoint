@@ -61,36 +61,30 @@
 </script>
 
 <div class="columns is-gapless is-multiline fullwidth">
-	<div id="iframe-container" class="column is-12" style="height:75vh;background:#292929"></div>
-	<div class="column is-half" style="display: flex;">
+	<div id="iframe-container" class="column is-12"></div>
+	<div class="column is-half is-flex">
 		<article class="message is-primary">
 		  <div class="message-header">
-		    <p>
-					Link to Full Screen Viewer&nbsp;&nbsp;
-					<a title="Open in new window" href={absoluteQuery} target="_none"><Icon data={externalLink} /></a>
-				</p>
+				Link to Full Screen Viewer&nbsp;&nbsp;
+				<a title="Open in new window" href={absoluteQuery} target="_none"><Icon data={externalLink} /></a>
 		  </div>
 		  <div class="message-body">
-				<p style="font-size:.8rem;word-wrap:break-word;max-width:100%">
-					<a href={absoluteQuery} target="_none">{absoluteQuery}</a>
-				</p>
+				<a href={absoluteQuery} target="_none">{absoluteQuery}</a>
 		  </div>
 		</article>
 	</div>
 
-	<div class="column is-half" style="display: flex;">
+	<div class="column is-half is-flex">
 		<article class="message is-link mr-5">
 		  <div id="embed-header" class="message-header">
-		    <p>
 					Embed Code&nbsp;&nbsp;
 					<a title="Copy to clipboard" on:click={() => copyToClipboard('embed-code')} on:click={triggerEmbedCopiedMessage}><Icon data={copy} /></a>
 					{#if embedCopiedMessage}
 					<span transition:fade class="ephemeral-message">&nbsp;Copied to clipboard!</span>
 					{/if}
-				</p>
 		  </div>
-		  <div class="message-body">
-		    <p id="embed-code" style="font-size:.8rem;word-wrap:break-word;font-family:monospace;max-width:100%" on:click={() => copyToClipboard('embed-code')} on:click={triggerEmbedCopiedMessage}>{embedCode}</p>
+		  <div class="message-body" id="embed-code" on:click={() => copyToClipboard('embed-code')} on:click={triggerEmbedCopiedMessage}>
+		    {embedCode}
 			</div>
 		</article>
 	</div>

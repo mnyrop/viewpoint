@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-/* $container-max-width: 900px; */
 $primary: #8957E5;
 $link: #5600E8;
 $message-header-radius: 0px;
@@ -44,9 +43,25 @@ html, body {
   width: 100%;
 }
 
-
 .ephemeral-message {
   font-family: monospace;
   font-size: .8rem;
   font-weight: normal;
+}
+
+.message-body {
+  font-size:.8rem;
+  word-wrap:break-word;
+  max-width:100%;
+  font-family:monospace;
+}
+
+#iframe-container {
+  height:75vh;
+  background:#292929;
+}
+
+.eye-spaced {
+  margin-left:-20px;
+  width:80px;
 }
