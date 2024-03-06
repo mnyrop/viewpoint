@@ -14,7 +14,6 @@
 3. Open the `src/lib/vars/constants.js` file in your new repo using GitHub editor and change the following lines:
    ```js
    export const siteTitle = 'viewpoint';
-   export const baseUrl = '/viewpoint'; // this should be the same as your repo too, e.g., '/my-repo'
    export const siteDescription = 'embeddable iiif viewers with svelte-kit';
    export const sampleManifests = [
    	'https://purl.stanford.edu/wr796rv9498/iiif/manifest',
@@ -24,12 +23,7 @@
    	'https://www.e-codices.unifr.ch/metadata/iiif/bc-s-0007/manifest.json',
    	'https://www.e-codices.unifr.ch/metadata/iiif/bc-s-0058/manifest.json',
    	'https://www.e-codices.unifr.ch/metadata/iiif/snm-AG002760/manifest.json',
-   	'https://www.e-codices.unifr.ch/metadata/iiif/hmtg-T09393/manifest.json',
-   	'https://gallica.bnf.fr/iiif/ark:/12148/btv1b53212522c/manifest.json',
-   	'https://gallica.bnf.fr/iiif/ark:/12148/btv1b8400342f/manifest.json',
-   	'https://gallica.bnf.fr/iiif/ark:/12148/btv1b84006642/manifest.json',
-   	'https://gallica.bnf.fr/iiif/ark:/12148/btv1b8490923n/manifest.json',
-   	'https://jsonstorage.net/api/items/ce49ca3a-3031-4914-bb60-069a65642f9f'
+   	'https://www.e-codices.unifr.ch/metadata/iiif/hmtg-T09393/manifest.json'
    ];
    ```
 4. Go to your repo's homepage and navigate to `Settings` > `Pages` (on the left panel). Under `Source` select `Branch gh-pages` and click `Save`.
@@ -47,7 +41,7 @@
 
 1. Clone the repo
    ```sh
-   git clone git@github.com:nyu-dss/viewpoint-template.git && cd viewpoint-template
+   git clone git@github.com:middlicomp/viewpoint-template.git && cd viewpoint-template
    ```
 2. Install project node version (specified in `.nvmrc`)
    ```sh
