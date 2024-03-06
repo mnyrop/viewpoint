@@ -1,4 +1,4 @@
-name: github pages deploy
+name: lighthouse a11y test
 on:
   push:
     branches:
@@ -21,8 +21,7 @@ jobs:
         run: npm install
       - name: build
         run: npm run build
-      - name: deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+      - name: test a11y
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+        run: npm run test
