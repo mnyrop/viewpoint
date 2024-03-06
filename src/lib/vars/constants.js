@@ -1,4 +1,4 @@
-export const siteTitle 	= 'viewpoint';
+export const siteTitle = 'viewpoint';
 export const siteDescription = 'embeddable iiif viewers with svelte-kit';
 export const sampleManifests = [
 	'https://purl.stanford.edu/wr796rv9498/iiif/manifest',
@@ -12,8 +12,7 @@ export const sampleManifests = [
 	'https://gallica.bnf.fr/iiif/ark:/12148/btv1b53212522c/manifest.json',
 	'https://gallica.bnf.fr/iiif/ark:/12148/btv1b8400342f/manifest.json',
 	'https://gallica.bnf.fr/iiif/ark:/12148/btv1b84006642/manifest.json',
-	'https://gallica.bnf.fr/iiif/ark:/12148/btv1b8490923n/manifest.json',
-	'https://jsonstorage.net/api/items/ce49ca3a-3031-4914-bb60-069a65642f9f'
+	'https://gallica.bnf.fr/iiif/ark:/12148/btv1b8490923n/manifest.json'
 ];
 export const placeholderText = 'URI input';
 export const viewers = [
@@ -49,10 +48,5 @@ export const viewers = [
 				icon: 'cog'
 			}
 		]
-	},
-	// {
-	// 	id: 'uv',
-	// 	label: 'Universal Viewer',
-	// 	options: []
-	// }
+	}
 ];

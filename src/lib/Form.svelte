@@ -11,10 +11,10 @@
 	$selectedManifests = [sampleManifests[0], sampleManifests[1]];
 	$selectedViewer = viewers[0];
 
-	$: $query = `${base}/${$selectedViewer.id}#${queryString.stringify($queryObject, { arrayFormat: 'bracket'})}`;
+	$: $query = `${base}/${$selectedViewer.id}#${queryString.stringify($queryObject, { arrayFormat: 'bracket' })}`;
 </script>
 
-
-<ManifestControls />
-
-<ViewerControls />
+<section role="form">
+	<ManifestControls />
+	<ViewerControls />
+</section>
