@@ -1,6 +1,6 @@
 <script>
-	import '../app.scss';
-	import { base } from '$app/paths';
+  import '../app.scss';
+  import { base } from '$app/paths';
 </script>
 
 <slot />

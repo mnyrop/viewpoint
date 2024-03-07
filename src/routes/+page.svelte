@@ -1,18 +1,18 @@
 <script>
-	import { siteTitle, siteDescription } from '$lib/vars/constants.js';
-	import { timestamp } from '$lib/BuildTimeStamp.svelte';
-	import { base } from '$app/paths';
+  import { siteTitle, siteDescription } from '$lib/vars/constants.js';
+  import { timestamp } from '$lib/BuildTimeStamp.svelte';
+  import { base } from '$app/paths';
 
-	import Icon from 'svelte-awesome';
-	import { github } from 'svelte-awesome/icons';
+  import Icon from 'svelte-awesome';
+  import { github } from 'svelte-awesome/icons';
 
-	import Form from '$lib/Form.svelte';
-	import Results from '$lib/Results.svelte';
+  import Form from '$lib/Form.svelte';
+  import Results from '$lib/Results.svelte';
 </script>
 
 <svelte:head>
-	<title>{siteTitle}</title>
-	<link rel="icon" href="{base}/favicon.png" />
+  <title>{siteTitle}</title>
+  <link rel="icon" href="{base}/favicon.png" />
 </svelte:head>
 
 <section class="hero m-0 p-0 fullheight">

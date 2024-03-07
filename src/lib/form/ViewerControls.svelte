@@ -1,36 +1,36 @@
 <script>
-	import { viewers } from '$lib/vars/constants.js';
-	import { queryObject, selectedViewer } from '$lib/vars/stores.js';
+  import { viewers } from '$lib/vars/constants.js';
+  import { queryObject, selectedViewer } from '$lib/vars/stores.js';
 </script>
 
 <h2 class="title is-6 mt-5">Viewer Settings</h2>
 
 <div class="field has-addons has-addons-left fullwidth">
-	<label for="viewer-select" class="control button no-hover is-primary is-small">Viewer</label>
-	<div class="control fullwidth">
-		<div class="select is-small fullwidth">
-			<select id="viewer-select" bind:value={$selectedViewer} class="fullwidth">
-				{#each viewers as viewer}
-					<option value={viewer}>{viewer.label}</option>
-				{/each}
-			</select>
-		</div>
-	</div>
+  <label for="viewer-select" class="control button no-hover is-primary is-small">Viewer</label>
+  <div class="control fullwidth">
+    <div class="select is-small fullwidth">
+      <select id="viewer-select" bind:value={$selectedViewer} class="fullwidth">
+        {#each viewers as viewer}
+          <option value={viewer}>{viewer.label}</option>
+        {/each}
+      </select>
+    </div>
+  </div>
 </div>
 
 {#each $selectedViewer.options as option}
-	<div class="field has-addons has-addons-left fullwidth">
-		<label for="{option.id}-select" class="control button no-hover is-primary is-small"
-			>{option.label}</label
-		>
-		<div class="control fullwidth">
-			<div class="select is-small fullwidth">
-				<select id="{option.id}-select" bind:value={$queryObject[option.id]} class="fullwidth">
-					{#each option.values as value}
-						<option value={value.toLowerCase()}>{value}</option>
-					{/each}
-				</select>
-			</div>
-		</div>
-	</div>
+  <div class="field has-addons has-addons-left fullwidth">
+    <label for="{option.id}-select" class="control button no-hover is-primary is-small"
+      >{option.label}</label
+    >
+    <div class="control fullwidth">
+      <div class="select is-small fullwidth">
+        <select id="{option.id}-select" bind:value={$queryObject[option.id]} class="fullwidth">
+          {#each option.values as value}
+            <option value={value.toLowerCase()}>{value}</option>
+          {/each}
+        </select>
+      </div>
+    </div>
+  </div>
 {/each}
