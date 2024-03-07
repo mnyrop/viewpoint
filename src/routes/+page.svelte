@@ -23,7 +23,7 @@
 					<a href="{base}/">
 						<h1 class="title is-size-4">{siteTitle}</h1>
 					</a>
-					<a href="https://github.com/nyu-dss/viewpoint" target="_blank" aria-label="GitHub link">
+					<a href="https://github.com/middlicomp/viewpoint" target="_blank" aria-label="GitHub link">
 						<button title="Open on GitHub" class="button is-ghost has-text-white"
 							><Icon data={github} scale="1.5" /></button
 						>
